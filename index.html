@@ -1,0 +1,193 @@
+<html>
+
+    <head>
+
+        <title>Avis de restaurants</title>
+        <meta name="description" content="Avis de restaurants">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="bootstrap4/js/bootstrap.min.js"></script> 
+
+        <!-- Custom styles -->
+        <link  rel="stylesheet"  href="style.css">
+
+
+
+    </head>
+    <body>
+        <header>
+            <h1 class="display-3 center">Avosavis<img id="iconeChef" src="icons/chef.png"></h1>
+        </header>
+        <div id="carte" class="container">
+
+            <div class="row">
+                <div id="map" class="col-sm-9"></div>
+                <div id="liste" class="col-sm-3">
+                    <div id="test">
+                        <div id="filtre">
+                            <h4 id="titreListe">Liste de restaurant</h4>
+                            <p>Filtrer selon les notes :</p>
+                            <div id="headerFixed" class="container">
+                                <div id="selecteur1" class="row">
+                                    <div class="col-12">
+                                        <select class="form-control form-control-sm" id="sel1">
+                                            <option value="1">Note minimum : 1</option>
+                                            <option value="2">Note minimum : 2</option>
+                                            <option value="3">Note minimum : 3</option>
+                                            <option value="4">Note minimum : 4</option>
+                                            <option value="5">Note minimum : 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="selecteur2" class="row">
+                                    <div class="col-12">
+                                        <select class="form-control form-control-sm" id="sel2">  
+                                            <option value="1">Note maximum : 1</option>
+                                            <option value="2">Note maximum : 2</option>
+                                            <option value="3">Note maximum : 3</option>
+                                            <option value="4">Note maximum : 4</option>
+                                            <option selected value="5">Note maximum : 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="erreurFiltre"></p>
+                            <hr class="sepListe">
+                        </div>
+                        <div id="restos"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!--  Modal AVIS -->
+        <div class="modal fade" id="modalAvis">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Avis sur le restaurant <span id="nomResto"></span></h4>
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <hr id="sepTitreEtoile">
+                    <span id="moyenneDansInfo"></span>
+                    <img id="streetView">
+                    <!-- Modal body -->
+                    <div id="adresse">Adresse : <span id="adresseResto"></span></div>
+                    <div id="bodyDerniersAvis" class="modal-body"></div>
+                    <div id="bodyAvis" class="modal-body">
+                    
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--  Modal COMMENTAIRE -->
+        <div class="modal fade" id="modalCom">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Entrer un avis sur le restaurant <span id="nomRestoAvis"></span></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div id="bodyCom" class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleSelect1">Selectionnez un nombre d'étoiles :</label>
+                            <select class="form-control" id="etoileNote">
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <label for="exampleTextarea">Entrez votre avis :</label>
+                            <textarea class="form-control" id="avisTextarea" rows="3"></textarea>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button id="enregistrerAvis" type="button" data-dismiss="modal" class="btn btn-success">Enregistrer l'avis</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--  Modal AJOUT RESTO -->
+        <div class="modal fade" id="modalAjoutResto">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Entrer un nouveau restaurant</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div id="bodyCom" class="modal-body">
+                        <div class="form-group">
+                            <label for="nomNouveauResto">Entrez le nom de ce restaurant :</label>
+                            <input class="form-control" id="nomNouveauResto">
+                            <label for="adresseNouveauResto">Entrez l'adresse :</label>
+                            <input class="form-control" id="adresseNouveauResto">
+                        </div>
+
+                        <label for="etoileNote">Selectionnez un nombre d'étoiles :</label>
+                        <select class="form-control" id="noteNouveauResto">
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="avisTextarea">Entrez votre avis :</label>
+                        <textarea class="form-control" id="avisNouveauResto" rows="3"></textarea>
+
+
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button id="enregistrerResto" type="button"  class="btn btn-success">Enregistrer le restaurant</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="JS/initCarte.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf4GOhxsge_3kuAKHKDDiWLVEbl6t-1dw&callback=initMap&callback=initMap&libraries=places" async defer></script>
+        <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
+
+
+
+
+
+
+    </body>
+</html>

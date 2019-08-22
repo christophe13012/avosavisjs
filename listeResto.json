@@ -1,0 +1,120 @@
+
+[
+    {
+        "restaurantName":"Bronco",
+        "address":"39 Rue des Petites Écuries, 75010 Paris",
+        "lat":48.8737815,
+        "long":2.3501649,
+        "ratings":[
+            {
+                "stars":4,
+                "comment":"Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
+            },
+            {
+                "stars":5,
+                "comment":"Tout simplement mon restaurant préféré !"
+            }
+        ]
+    },
+    {
+        "restaurantName":"Babalou",
+        "address":"4 Rue Lamarck, 75018 Paris",
+        "lat":48.8865035,
+        "long":2.3442197,
+        "ratings":[
+            {
+                "stars":5,
+                "comment":"Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
+            },
+            {
+                "stars":3,
+                "comment":"J'ai trouvé ça correct, sans plus"
+            }
+        ]
+    },
+    {
+        "restaurantName":"Vatel",
+        "address":"122 Rue Nollet, 75017 Paris",
+        "lat":48.896737,
+        "long":2.316957,
+        "ratings":[
+            {
+                "stars":5,
+                "comment":"Gourmandes et gourmands, à vos cuillères!"
+            },
+            {
+                "stars":4,
+                "comment":"Très bon bistrot, burger maison parfait !"
+            }
+        ]
+    },
+    {
+        "restaurantName":"Les moussaillons",
+        "address":"139 Rue Cardinet, 75017 Paris",
+        "lat":48.887645,
+        "long":2.312965,
+        "ratings":[
+            {
+                "stars":5,
+                "comment":"Meilleur restaurant d'huîtres et de poissons de Paris!"
+            },
+            {
+                "stars":4,
+                "comment":"Le patron est très agreable et aux petit soin ."
+            }
+        ]
+    },
+    {
+        "restaurantName":"Le Cinq Restaurant",
+        "address":"31 Avenue George V, 75008 Paris",
+        "lat":48.869824,
+        "long":2.300378,
+        "ratings":[
+            {
+                "stars":2,
+                "comment":"Moyen"
+            },
+            {
+                "stars":4,
+                "comment":"Et la tarte tatin, un régal."
+            }
+        ]
+    },
+    {
+        "restaurantName":"Epicure",
+        "address":"112 Rue du Faubourg Saint-Honoré, 75008 Paris",
+        "lat":48.871925,
+        "long":2.314660,
+        "ratings":[
+            {
+                "stars":5,
+                "comment":"Ce n'est pas pour rien que ce restaurant est recommandé au guide Michelin !"
+            },
+            {
+                "stars":2,
+                "comment":"Le service était très bon, mais le menu n'est pas imaginaire"
+            },
+            {
+                "stars":1,
+                "comment":"Nul"
+            }
+        ]
+    },
+    {
+        "restaurantName":"Thierry MARX",
+        "address":"251 Rue Saint Honoré, 75001 Paris",
+        "lat":48.867144,
+        "long":2.327187,
+        "ratings":[
+            {
+                "stars":5,
+                "comment":"Bœuf wasabi de Miyazaki et en dessert Piment et Melon , un régal"
+            },
+            {
+                "stars":5,
+                "comment":"Sublime explosion de saveurs en bouche, tout en finesse et en sobriété."
+            }
+        ]
+    }
+]
+

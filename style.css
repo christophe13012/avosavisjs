@@ -1,0 +1,219 @@
+header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#carte {
+
+    margin-bottom: 50px;
+}
+#liste {
+    background-color: #ef6c00;
+    margin: 0 0px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    color: ghostwhite;
+
+}
+
+#erreurFiltre {
+    margin-top: 5px;
+    color: darkred;
+    font-size: 14px;
+}
+
+#restos {
+    overflow: auto;
+    height: 450px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #restos {
+        overflow: auto;
+        height: 700px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+    #restos {
+        overflow: auto;
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 640px) {
+    #restos {
+        overflow: auto;
+        height: 410px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px) {
+    #restos {
+        overflow: auto;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    #restos {
+        overflow: auto;
+        height: 270px;
+    }
+}
+
+
+#sepListe, .sepListe {
+    background-color: ghostwhite;
+}
+
+#liste p { 
+    margin-bottom: 0px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.clignotte {
+    animation: clignotte 1.5s infinite;
+}
+@keyframes clignotte{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.horsCarte {
+    display: none;
+}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map, #liste {
+    height: 80%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#carte {
+    padding-bottom: 30px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#boutonCom {
+    margin-top: 10px;
+}
+
+#etoileNote {
+    margin-bottom: 15px;
+}
+
+#bodyDerniersAvis {
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+#bodyAvis {
+    padding-top: 0px;
+}
+
+#adresse {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#moyenneDansInfo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#sepTitreEtoile {
+    margin-bottom: 0px;
+}
+
+#selecteur1 {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+#selecteur2 {
+    margin-bottom: 0px;
+
+}
+
+#boutonComInfo {
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-top: 0px;
+}
+
+#iconeChef {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#titreListe {
+    font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#carte {
+    border: 5px solid #ef6c00;
+    border-radius: 10px;
+    padding-bottom: 0px;
+}
+
+#titreListe {
+    margin-top: 15px;
+
+}
+
+#filtre {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* modal */
+
+.modal-title {
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.fade.in {
+    opacity: 1;
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.modal-backdrop.in {
+    opacity: 0.5;
+}
+
+/* Bootstrap button xs */
+
+.btn-group-xs > .btn, .btn-xs {
+    padding  : .40rem .30rem;
+    font-size  : .875rem;
+    line-height  : .5;
+    border-radius : .2rem;
+}
